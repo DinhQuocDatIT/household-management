@@ -1,0 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******************
+     THEME 
+*******************/
+:root {
+  /* --- 1. MÀU CHỦ ĐẠO (PRIMARY) --- */
+  /* Xanh dương hiện đại cho Button, Active State, Links */
+  --p-500: #2563eb;
+  --p-600: #1d4ed8;
+  --p-700: #1e40af;
+  --p-50: #eff6ff; /* Dùng cho background item đang được chọn (active) */
+
+  /* --- 2. MÀU THƯƠNG HIỆU (BRAND) --- */
+  /* Màu Nâu Đồng cho Logo và các biểu tượng quan trọng */
+  --brand-gold: #8b5e3c;
+  --brand-gold-light: #a67c52;
+  --brand-gradient: linear-gradient(
+    135deg,
+    var(--brand-gold),
+    var(--brand-gold-light)
+  );
+
+  /* --- 3. MÀU TRẠNG THÁI (STATUS) --- */
+  --success: #22c55e; /* Bình thường */
+  --warning: #f59e0b; /* Cận nghèo */
+  --danger: #ef4444; /* Hộ nghèo */
+
+  /* --- 4. MÀU TRUNG TÍNH (NEUTRALS - Xám) --- */
+  --bg-body: #f8fafc; /* Màu nền chính của toàn trang */
+  --bg-card: #ffffff; /* Màu nền của Sidebar, Card, Table */
+  --text-main: #1e293b; /* Màu chữ chính (Tiêu đề) */
+  --text-sub: #64748b; /* Màu chữ phụ (Mô tả, caption) */
+  --border-color: #f1f5f9; /* Màu đường kẻ border nhẹ nhàng */
+
+  /* --- 5. ĐỔ BÓNG (SHADOWS) --- */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-primary: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+
+  /* --- 6. BO GÓC (RADIUS) --- */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  /* màu nền background */
+  --p-white: #ffffff;
+
+  /*màu hover*/
+  --p-hover: #f0f0f0;
+  /*   border đường viên*/
+  --p-solid-boder: 1px solid rgb(225, 225, 225);
+
+  --p-500-code: 228, 81%, 63%;
+  --p-600-code: 233, 73%, 59%;
+  --p-700-code: 234, 56%, 51%;
+  --p-900-code: 231, 46%, 34%;
+  --p-950-code: 233, 45%, 20%;
+
+  /* Neutrals */
+  --n-50: hsl(210, 14%, 97%);
+  --n-500: hsl(215, 16%, 47%);
+  --n-600: hsl(215, 16%, 35%);
+  --foreground-color: hsl(0, 0%, 100%);
+
+  /* Gradients */
+  --main-gradient-color: linear-gradient(to right, var(--p-450), var(--p-500));
+  --gradient-color: linear-gradient(var(--foreground-color) 10%, var(--p-100));
+
+  /*================================= 
+        FONTS -  Sử dụng Scale 1.125
+    =================================*/
+  /* 32px */
+  --h1-font-size: 2rem;
+  /* 36px */
+  --h1-line-height: 2.25rem;
+
+  /* 26px */
+  --h2-font-size: 1.6rem;
+  /* 32px */
+  --h2-line-height: 2rem;
+
+  /* 20px */
+  --h3-font-size: 1.266rem;
+  /* 24px */
+  --h3-line-height: 1.5rem;
+
+  /* 18px */
+  --h4-font-size: 1.125rem;
+  /* 16px */
+  --h4-line-height: 1.5rem;
+
+  /* 16px */
+  --p-font-size: 1rem;
+  /* 24px */
+  --p-line-height: 1.5rem;
+
+  --p-letter-spacing: 0.025rem;
+
+  /* 12px */
+  --caption-font-size: 0.875rem;
+  /* 16px */
+  --caption-line-height: 1rem;
+}

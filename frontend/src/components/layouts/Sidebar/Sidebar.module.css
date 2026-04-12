@@ -1,0 +1,103 @@
+.sidebar {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 20px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Brand/Logo Section */
+.brandContainer {
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconBox {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--radius-md);
+  background: var(--brand-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--p-white);
+  box-shadow: 0 4px 12px rgba(139, 94, 60, 0.15);
+}
+
+.brandName {
+  font-size: var(--h3-font-size);
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.brandSub {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
+/* Navigation Menu */
+.nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-sub);
+}
+
+/* Hover State */
+.navItem:hover {
+  background-color: var(--n-50);
+  color: var(--text-main);
+}
+
+/* Active State */
+.navItemActive {
+  background-color: var(--p-50);
+  color: var(--p-500);
+  font-weight: 700;
+}
+
+/* Icon Alignment */
+.iconContainer {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/* Tùy chỉnh thanh cuộn nếu menu quá dài */
+.nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nav::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
