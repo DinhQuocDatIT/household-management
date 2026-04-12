@@ -1,13 +1,20 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faChartLine, faGear, faShieldHalved, faXmark } from '@fortawesome/free-solid-svg-icons';
-import styles from './Sidebar.module.css';
+import React from "react";
+import { NavLink } from "react-router-dom"; // Dùng NavLink thay cho <a>
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUsers,
+  faChartLine,
+  faGear,
+  faShieldHalved,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
+import styles from "./Sidebar.module.css";
 
 const Sidebar = ({ closeSidebar }) => {
   const menuItems = [
-    { icon: faUsers, label: 'Danh sách hộ gia đình', active: true },
-    { icon: faChartLine, label: 'Thống kê', active: false },
-    { icon: faGear, label: 'Cài đặt', active: false },
+    { icon: faUsers, label: "Danh sách hộ gia đình", path: "/households" },
+    { icon: faChartLine, label: "Thống kê", path: "/statistics" },
+    { icon: faGear, label: "Cài đặt", path: "/settings" },
   ];
 
   return (
@@ -19,7 +26,6 @@ const Sidebar = ({ closeSidebar }) => {
           </div>
           <h1 className={styles.brandName}>The Sovereign</h1>
         </div>
-        {/* Nút đóng Sidebar chỉ hiện trên Mobile */}
         <button className={styles.closeBtn} onClick={closeSidebar}>
           <FontAwesomeIcon icon={faXmark} />
         </button>
@@ -27,16 +33,19 @@ const Sidebar = ({ closeSidebar }) => {
 
       <nav className={styles.nav}>
         {menuItems.map((item, index) => (
-          <a
+          <NavLink
             key={index}
-            href="#"
-            className={`${styles.navItem} ${item.active ? styles.navItemActive : ''}`}
+            to={item.path}
+            className={({ isActive }) =>
+              `${styles.navItem} ${isActive ? styles.navItemActive : ""}`
+            }
+            onClick={closeSidebar} 
           >
             <div className={styles.iconContainer}>
               <FontAwesomeIcon icon={item.icon} />
             </div>
             <span>{item.label}</span>
-          </a>
+          </NavLink>
         ))}
       </nav>
     </div>

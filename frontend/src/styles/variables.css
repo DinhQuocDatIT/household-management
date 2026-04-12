@@ -165,7 +165,7 @@ table {
   --danger: #ef4444; /* Hộ nghèo */
 
   /* --- 4. MÀU TRUNG TÍNH (NEUTRALS - Xám) --- */
-  --bg-body: #f8fafc; /* Màu nền chính của toàn trang */
+  --bg-body: #f7f7f7; /* Màu nền chính của toàn trang */
   --bg-card: #ffffff; /* Màu nền của Sidebar, Card, Table */
   --text-main: #1e293b; /* Màu chữ chính (Tiêu đề) */
   --text-sub: #64748b; /* Màu chữ phụ (Mô tả, caption) */

@@ -1,0 +1,98 @@
+.grid {
+  display: grid;
+  gap: 24px;
+  /* Mặc định 4 cột trên Desktop */
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.statCard {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+}
+
+.normalCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.primaryCard {
+  background: var(--text-main);
+  color: white;
+}
+
+.label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.normalCard .label {
+  color: var(--text-sub);
+}
+.primaryCard .label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.value {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+}
+
+.subValue {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-sub);
+  opacity: 0.7;
+}
+
+.trendNormal {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.trendPrimary {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* RESPONSIVE */
+
+/* Cho Tablet (iPad, Surface) */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Cho Mobile (iPhone, Android) */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .value {
+    font-size: 28px;
+  }
+}
