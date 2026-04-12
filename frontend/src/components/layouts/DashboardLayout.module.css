@@ -3,14 +3,16 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-color: #f8f9fa;
+  background-color: var(--bg-body);
 }
 
 .sidebarWrapper {
   width: 280px;
   flex-shrink: 0;
   height: 100%;
-  border-right: 1px solid #f0f0f0;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border-color);
+  transition: transform 0.3s ease-in-out;
 }
 
 .mainContainer {
@@ -18,12 +20,40 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: hidden; /* Quan trọng để main content cuộn riêng */
+  overflow: hidden;
 }
 
 .content {
   flex: 1;
   padding: 32px;
-  overflow-y: auto; /* Cho phép cuộn nội dung chính */
-  background-color: #f8f9fa;
+  overflow-y: auto;
+  background-color: var(--bg-body);
+}
+
+/* RESPONSIVE LOGIC */
+@media (max-width: 1024px) {
+  .sidebarWrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transform: translateX(-100%); /* Ẩn sidebar ra khỏi màn hình */
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebarWrapper.open {
+    transform: translateX(0); /* Hiện sidebar khi có class .open */
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+  }
+
+  .content {
+    padding: 20px;
+  }
 }

@@ -1,18 +1,13 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUsers,
-  faChartLine,
-  faGear,
-  faShieldHalved,
-} from "@fortawesome/free-solid-svg-icons";
-import styles from "./Sidebar.module.css";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faChartLine, faGear, faShieldHalved, faXmark } from '@fortawesome/free-solid-svg-icons';
+import styles from './Sidebar.module.css';
 
-const Sidebar = () => {
+const Sidebar = ({ closeSidebar }) => {
   const menuItems = [
-    { icon: faUsers, label: "Danh sách hộ gia đình", active: true },
-    { icon: faChartLine, label: "Thống kê", active: false },
-    { icon: faGear, label: "Cài đặt", active: false },
+    { icon: faUsers, label: 'Danh sách hộ gia đình', active: true },
+    { icon: faChartLine, label: 'Thống kê', active: false },
+    { icon: faGear, label: 'Cài đặt', active: false },
   ];
 
   return (
@@ -24,7 +19,10 @@ const Sidebar = () => {
           </div>
           <h1 className={styles.brandName}>The Sovereign</h1>
         </div>
-        <p className={styles.brandSub}>Administrative Interface</p>
+        {/* Nút đóng Sidebar chỉ hiện trên Mobile */}
+        <button className={styles.closeBtn} onClick={closeSidebar}>
+          <FontAwesomeIcon icon={faXmark} />
+        </button>
       </div>
 
       <nav className={styles.nav}>
@@ -32,7 +30,7 @@ const Sidebar = () => {
           <a
             key={index}
             href="#"
-            className={`${styles.navItem} ${item.active ? styles.navItemActive : ""}`}
+            className={`${styles.navItem} ${item.active ? styles.navItemActive : ''}`}
           >
             <div className={styles.iconContainer}>
               <FontAwesomeIcon icon={item.icon} />

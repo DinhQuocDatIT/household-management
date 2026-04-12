@@ -1,0 +1,139 @@
+.topBar {
+  min-height: 80px;
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  flex-wrap: wrap; /* Cho phép rớt dòng khi thiếu chỗ */
+  gap: 10px;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  font-size: var(--h3-font-size);
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+/* Ô tìm kiếm trên Desktop */
+.searchContainer {
+  flex: 1;
+  max-width: 450px;
+  margin: 0 20px;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-sub);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  background-color: var(--bg-body);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  outline: none;
+  font-size: 14px;
+}
+
+/* Cụm phải */
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text-sub);
+  position: relative;
+  cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--danger);
+  border-radius: 50%;
+  border: 2px solid var(--bg-card);
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: var(--border-color);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.menuBtn {
+  display: none;
+}
+
+/* =============================================
+   RESPONSIVE LOGIC
+   ============================================= */
+@media (max-width: 1024px) {
+  .topBar {
+    padding: 15px 20px;
+    /* Không cố định chiều cao để chứa được 2 hàng */
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  /* ẨN TIÊU ĐỀ KHI CO MÀN HÌNH */
+  .title {
+    display: none;
+  }
+
+  /* ĐẨY Ô TÌM KIẾM XUỐNG HÀNG 2 */
+  .searchContainer {
+    order: 3; /* Đưa xuống sau cùng */
+    flex: none;
+    width: 100%; /* Chiếm trọn hàng mới */
+    max-width: none;
+    margin: 10px 0 0 0;
+  }
+
+  /* Đảm bảo Avatar và Menu vẫn ở hàng 1 */
+  .leftGroup {
+    order: 1;
+  }
+  .rightGroup {
+    order: 2;
+  }
+
+  .divider {
+    display: none;
+  }
+}
