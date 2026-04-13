@@ -84,9 +84,8 @@
   padding: 15px 25px;
   text-align: left;
   font-size: 12px;
-  text-transform: uppercase;
   font-weight: 800;
-  color: var(--text-sub);
+  color: var(--text-m);
   letter-spacing: 0.05em;
 }
 
@@ -111,7 +110,7 @@
   font-family: "JetBrains Mono", monospace;
   font-weight: 700;
   font-size: 13px;
-  color: var(--p-600);
+  color: var(--text-main);
 }
 
 .ownerInfo {

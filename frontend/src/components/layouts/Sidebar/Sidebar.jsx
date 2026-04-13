@@ -24,7 +24,7 @@ const Sidebar = ({ closeSidebar }) => {
           <div className={styles.iconBox}>
             <FontAwesomeIcon icon={faShieldHalved} size="lg" />
           </div>
-          <h1 className={styles.brandName}>The Sovereign</h1>
+          <h1 className={styles.brandName}>LTHD</h1>
         </div>
         <button className={styles.closeBtn} onClick={closeSidebar}>
           <FontAwesomeIcon icon={faXmark} />
@@ -39,7 +39,7 @@ const Sidebar = ({ closeSidebar }) => {
             className={({ isActive }) =>
               `${styles.navItem} ${isActive ? styles.navItemActive : ""}`
             }
-            onClick={closeSidebar} 
+            onClick={closeSidebar}
           >
             <div className={styles.iconContainer}>
               <FontAwesomeIcon icon={item.icon} />

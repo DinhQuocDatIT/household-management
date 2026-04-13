@@ -4,12 +4,7 @@
 */
 html,
 body {
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    sans-serif;
+  font-family: "JetBrains Mono", monospace;
 }
 html,
 body,
@@ -144,11 +139,11 @@ table {
 :root {
   /* --- 1. MÀU CHỦ ĐẠO (PRIMARY) --- */
   /* Xanh dương hiện đại cho Button, Active State, Links */
-  --p-500: #2563eb;
+  --p-500: #1e293b;
   --p-600: #1d4ed8;
   --p-700: #1e40af;
-  --p-50: #eff6ff; /* Dùng cho background item đang được chọn (active) */
-
+  --p-50: #f0f0f0; /* Dùng cho background item đang được chọn (active) */
+  /* --p-50: #eff6ff; */
   /* --- 2. MÀU THƯƠNG HIỆU (BRAND) --- */
   /* Màu Nâu Đồng cho Logo và các biểu tượng quan trọng */
   --brand-gold: #8b5e3c;

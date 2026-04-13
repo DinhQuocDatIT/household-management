@@ -17,7 +17,7 @@ const HouseholdList = () => {
       <header className={styles.header}>
         <div className={styles.titleGroup}>
           <div className={styles.iconDecor}><LayoutGrid size={20} /></div>
-          <h1 className={styles.title}>Quản lý Hộ gia đình</h1>
+    
         </div>
         <button className={styles.addBtn}>
           <Plus size={20} />
@@ -53,7 +53,7 @@ const HouseholdList = () => {
                   <td className={styles.idCell}><span>{hh.id}</span></td>
                   <td>
                     <div className={styles.ownerInfo}>
-                      <div className={styles.avatar}>{hh.initials}</div>
+                    
                       <span className={styles.ownerName}>{hh.owner}</span>
                     </div>
                   </td>

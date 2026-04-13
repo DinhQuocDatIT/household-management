@@ -30,7 +30,7 @@ export default function MemberTable({ members }) {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th>CCCD/Định danh</th>
+              <th>CCCD</th>
               <th>Họ và Tên</th>
               <th>Giới tính</th>
               <th style={{ textAlign: "center" }}>Ngày sinh</th>

@@ -24,7 +24,7 @@
   width: 45px;
   height: 45px;
   border-radius: var(--radius-md);
-  background: var(--brand-gradient);
+  background: var(--text-main);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,7 @@
   align-items: center;
   gap: 14px;
   padding: 14px 18px;
-  border-radius: var(--radius-md);
+  border-radius: 10px;
   text-decoration: none;
   color: var(--text-sub);
   transition: 0.2s;
@@ -68,10 +68,12 @@
 
 .navItemActive {
   background-color: var(--p-50);
-  color: var(--p-500);
+  color: var(--text-main);
   font-weight: 700;
 }
 
 @media (max-width: 1024px) {
-  .closeBtn { display: block; } /* Hiện nút đóng trên mobile */
+  .closeBtn {
+    display: block;
+  } /* Hiện nút đóng trên mobile */
 }

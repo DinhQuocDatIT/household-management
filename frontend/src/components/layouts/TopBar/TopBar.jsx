@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBell, faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./TopBar.module.css";
-
+import svgreactjs from "../../../assets/react.svg";
 const TopBar = ({ onMenuClick }) => {
   return (
     <header className={styles.topBar}>
@@ -33,11 +33,7 @@ const TopBar = ({ onMenuClick }) => {
           <span className={styles.badge}></span>
         </button>
         <div className={styles.divider}></div>
-        <img
-          src="https://picsum.photos/seed/admin/100/100"
-          className={styles.avatar}
-          alt="Admin"
-        />
+        <img src={svgreactjs} className={styles.avatar} alt="Admin" />
       </div>
     </header>
   );
